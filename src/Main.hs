@@ -18,4 +18,4 @@ main = do
                         Just "--weezer" -> applyWeezerTheme $ generateFullPage (removeExtensionMD (arg !! 0)) content template ["#009CCF", "#BDD639", "#EF1831", "#ECECEC"]
                         _ -> generateFullPage (removeExtensionMD (arg !! 0)) content template colors
     writeFile (removeExtensionMD (arg !! 0) ++ ".html") $ T.unpack htmlGenerated
-
+    print "File successfully created"

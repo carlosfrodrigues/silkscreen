@@ -1,5 +1,10 @@
 # Revision history for silkscreen
 
-## 0.1.0.0 -- YYYY-mm-dd
+## 0.9.0.0 -- 2020-08-19
 
-* First version. Released on an unsuspecting world.
+* Added OverloadedStrings and removed unnecessary Text.Pack.
+* Using a better indentation.
+
+## 0.8.0.0 -- 2020-08-10
+
+* First version published on Github.

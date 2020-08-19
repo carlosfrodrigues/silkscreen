@@ -4,7 +4,7 @@ cabal-version:       >=1.10
 -- http://haskell.org/cabal/users-guide/
 
 name:                silkscreen
-version:             0.8.0.0
+version:             0.9.0.0
 -- synopsis:
 -- description:
 -- bug-reports:

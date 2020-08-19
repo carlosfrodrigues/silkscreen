@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title><< +TITLE+ >></title>
+        <title>test</title>
         <script>
 
 document.addEventListener("touchstart", handleTouchStart, { passive: false });
@@ -117,9 +117,9 @@ document.addEventListener("touchstart", handleTouchStart, { passive: false });
         h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
         body{
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
             font-size: 2vw;
-            color: wheat;
+            color: black;
         }
 
         .page{
@@ -152,9 +152,30 @@ document.addEventListener("touchstart", handleTouchStart, { passive: false });
             display: none;
 
         }
-<< +BACKGROUND COLOR+ >>
+		#pg1 {
+			background-color: #009CCF ;
+		}
+		#pg2 {
+			background-color: #BDD639 ;
+		}
+		#pg3 {
+			background-color: #EF1831 ;
+		}
+		#pg4 {
+			background-color: #ECECEC ;
+		}
 
-<< +ACTIONS+ >>
+
+		#rd2:checked ~ .sections{
+			margin-top: -100vh;
+		}
+		#rd3:checked ~ .sections{
+			margin-top: -200vh;
+		}
+		#rd4:checked ~ .sections{
+			margin-top: -300vh;
+		}
+
 
         .sections{
             transition: all 1s;
@@ -163,10 +184,44 @@ document.addEventListener("touchstart", handleTouchStart, { passive: false });
     </head>
     <body>
     <div class="scroll">
-<< +RADIOBUTTONS+ >>
+	<input type="radio" name="selectPage" id="rd1" checked="true" autofocus>
+	<input type="radio" name="selectPage" id="rd2">
+	<input type="radio" name="selectPage" id="rd3">
+	<input type="radio" name="selectPage" id="rd4">
+
     
     <section class="sections">
-<< +SECTIONS+ >>
+		<section class="page" id="pg1">
+			<div><h1>Silkscreen</h1>
+<h3>Generate FullPage with Markdown</h3>
+</div>
+		</section>
+
+		<section class="page" id="pg2">
+			<div><h2>Basics</h2>
+<ul>
+<li>Write in markdown language</li>
+<li>Separate slides using '---'</li>
+<li>Generate HTML files executing: silkscreen 'filename.md'</li>
+<li>The background colors are in 'config/colors'</li>
+</ul>
+</div>
+		</section>
+
+		<section class="page" id="pg3">
+			<div><p><img src="image.jpg" alt="computer" /></p>
+<h4>You can put images too</h4>
+<h5>just using the markdown syntax</h5>
+</div>
+		</section>
+
+		<section class="page" id="pg4">
+			<div><h1>Be</h1>
+<h2>CREATIVE</h2>
+</div>
+		</section>
+
+
     </section>
     </div>
     </body>

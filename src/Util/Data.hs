@@ -1,3 +1,4 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Util.Data
 (split
 ,sanitizeMarkdown
@@ -24,12 +25,14 @@ split sub str = splitbyIndices str (normalizeArray (findString sub str) $ length
 
 sanitizeMarkdown :: String -> String
 sanitizeMarkdown txt = do
-                        let newTxt = if(isInfixOf "\'---\'" txt) then T.unpack (T.replace (T.pack "\'---\'") (T.pack "<< +THREEDASHES+ >>") (T.pack txt)) else txt
+    let newTxt = if(isInfixOf "\'---\'" txt) then 
+            T.unpack (T.replace "\'---\'" "<< +THREEDASHES+ >>" (T.pack txt)) 
+        else txt
 
-                        if(newTxt !!! (length newTxt - 3, length newTxt) /= "---") then do
-                            (newTxt ++ "---")
-                        else
-                            newTxt
+    if(newTxt !!! (length newTxt - 3, length newTxt) /= "---") then do
+        (newTxt ++ "---")
+    else
+        newTxt
 
 removeExtensionMD :: String -> String
 removeExtensionMD file = if(isInfixOf ".md" file) then file !!! (0, (length file) - 3) else file
