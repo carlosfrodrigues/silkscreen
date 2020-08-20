@@ -20,6 +20,7 @@ matrix:
 install:
   - ghc --version
   - cabal --version
+  - cabal install cmark
   - cabal build
 
 notifications:
