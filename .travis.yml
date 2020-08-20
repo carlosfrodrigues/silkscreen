@@ -1,0 +1,27 @@
+sudo: true
+language: haskell
+
+git:
+  depth: 5
+
+  cabal: "3.2"
+
+  cache:
+    directories:
+    - "$HOME/.cabal/store"
+
+matrix:
+  include:
+  # Cabal
+  - ghc: 8.10.2
+  - ghc: 8.10.1
+  - ghc: 8.8.4
+
+install:
+  - ghc --version
+  - cabal --version
+  - cabal new-update
+  - cabal new-build
+
+notifications:
+  email: false
