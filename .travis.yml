@@ -4,7 +4,7 @@ language: haskell
 git:
   depth: 5
 
-  cabal: "2.4"
+  cabal: "3.2"
 
   cache:
     directories:
@@ -20,8 +20,7 @@ matrix:
 install:
   - ghc --version
   - cabal --version
-  - cabal new-update
-  - cabal new-build
+  - cabal build
 
 notifications:
   email: false
