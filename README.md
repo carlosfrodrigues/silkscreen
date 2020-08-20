@@ -1,4 +1,4 @@
-# Silkscreen
+# Silkscreen [![Build Status](https://travis-ci.org/carlosfrodrigues/silkscreen.svg?branch=master)](https://travis-ci.org/carlosfrodrigues/silkscreen)
 Silkscreen take Markdown files and convert to Fullpages slides in html. See the [example site](https://carlosfrodrigues.github.io/silkscreen-example/).
 
 ![silkscreen-gif](https://raw.githubusercontent.com/carlosfrodrigues/silkscreen/master/github-assets/silkscreen.gif)
