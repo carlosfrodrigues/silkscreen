@@ -1,14 +1,13 @@
 sudo: true
 language: haskell
+cabal: "3.2"
 
 git:
   depth: 5
 
-cabal: "3.2"
-
-  cache:
-    directories:
-    - "$HOME/.cabal/store"
+cache:
+  directories:
+  - "$HOME/.cabal/store"
 
 matrix:
   include:
@@ -17,6 +16,7 @@ matrix:
   - ghc: 8.10.1
 
 install:
+  - ghc --version
   - cabal --version
   - cabal new-update
   - cabal new-build
